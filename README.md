@@ -18,7 +18,7 @@ Using D3 a scatter plot that represents each state with circle elements was deve
 The data set is based on 2014 ACS 1-year estimates from the [US Census Bureau](https://data.census.gov/cedsci/. It includes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./images/captura.JPG)
 
 ## Technologies
 * Tech 1 – D3
