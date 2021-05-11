@@ -1,10 +1,10 @@
-var svgWidth = 960;
-var svgHeight = 620;
+var svgWidth = 850;
+var svgHeight = 650;
 
 var margin = {
-    top: 20,
-    right: 40,
-    bottom: 200,
+    top: 10,
+    right: 50,
+    bottom: 130,
     left: 100
   };
 
@@ -202,7 +202,7 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
         .attr("x", 0)
         .attr("y", 25)
         .attr("value", "poverty")
-        .text("In Poverty (%)");
+        .text("Poverty (%)");
 
     var ageLabel = xLabelsGroup.append("text")
         .classed("aText", true)
@@ -251,9 +251,18 @@ d3.csv("D3_data_journalism/data/data.csv").then(function(censusData) {
         .attr("dy", "1em")
         .attr("transform", "rotate(-90)")
         .attr("value", "obesity")
-        .text("Obese (%)");    
+        .text("Obesity (%)");    
         
     var circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup);
+
+chartGroup.append("text")
+    .attr("transform", `translate(${width - 110},${height - 5})`)
+    .text("Demographics")
+
+chartGroup.append("text")
+    .attr("transform", `translate(15,90 )rotate(270)`)
+    .attr("class", "axis-text-main")
+    .text("Health Risks")
 
     xLabelsGroup.selectAll("text")
         .on("click", function() {
